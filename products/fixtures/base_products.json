@@ -21,5 +21,41 @@
       "category": 1,
       "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches."
     }
-  }
+  },
+
+  {
+    "pk": 2,
+    "model": "products.product",
+      "fields": {
+        "sku": "AMA900001003",
+        "name": "2.5m barrel sauna",
+        "price": 2700,
+        "category": 1,
+        "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches."
+      }
+  },
+
+  {
+    "pk": 3,
+    "model": "products.product",
+      "fields": {
+        "sku": "AMA900001004",
+        "name": "3m barrel sauna",
+        "price": 3000,
+        "category": 1,
+        "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches."
+      }
+  },
+
+  {
+    "pk": 4,
+    "model": "products.product",
+      "fields": {
+        "sku": "AMA900001005",
+        "name": "3.5m barrel sauna",
+        "price": 3500,
+        "category": 1,
+        "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches."
+      }
+  }  
 ]
