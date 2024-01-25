@@ -6,7 +6,8 @@
       "sku": "AMA900001001",
       "name": "1.5m barrel sauna",
       "price": 2000,
-      "category": 0,
+      "stove_feature": 0,
+      "window_feature": 0,
       "description": "Barrel sauna, fully assembled. Full size outside: 1,5m length and 2.20m diameter. Inside: 1.21m length and 2.11m diameter. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches."
     }
   },
@@ -18,7 +19,8 @@
       "sku": "AMA900001002",
       "name": "2m barrel sauna",
       "price": 2300,
-      "category": 1,
+      "stove_feature": 0,
+      "window_feature": 0,
       "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches."
     }
   },
@@ -30,7 +32,8 @@
         "sku": "AMA900001003",
         "name": "2.5m barrel sauna",
         "price": 2700,
-        "category": 1,
+        "stove_feature": 0,
+        "window_feature": 0,
         "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches."
       }
   },
@@ -42,7 +45,8 @@
         "sku": "AMA900001004",
         "name": "3m barrel sauna",
         "price": 3000,
-        "category": 1,
+        "stove_feature": 0,
+        "window_feature": 0,
         "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches."
       }
   },
@@ -54,7 +58,8 @@
         "sku": "AMA900001005",
         "name": "3.5m barrel sauna",
         "price": 3500,
-        "category": 1,
+        "stove_feature": 0,
+        "window_feature": 0,
         "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches."
       }
   }  

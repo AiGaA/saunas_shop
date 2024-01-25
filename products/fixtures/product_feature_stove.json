@@ -1,27 +1,31 @@
-[ {
-  "pk": 0,
-  "model": "products.category",
-    "fields": {
-      "name": "Electric 7KW",
-      "stove_type": "Electric"
-    }
-  },
-
+[ 
   {
-  "pk": 1,
-  "model": "products.category",
-    "fields": {
-      "name": "Electric 8KW",
-      "stove_type": "Electric"
+    "pk": 0,
+    "model": "products.stovefeature",
+      "fields": {
+        "name": "Electric 7KW",
+        "stove_type": "Electric",
+        "price": 0
+      }
+    },
+  
+    {
+    "pk": 1,
+    "model": "products.stovefeature",
+      "fields": {
+        "name": "Electric 8KW",
+        "stove_type": "Electric",
+        "price": 700
+      }
+    },
+  
+    {
+    "pk": 2,
+    "model": "products.stovefeature",
+      "fields": {
+        "name": "Wood Burner",
+        "stove_type": "Wood Burner",
+        "price": 1000
+      }
     }
-  },
-
-  {
-  "pk": 2,
-  "model": "products.category",
-    "fields": {
-      "name": "Wood Burner",
-      "stove_type": "Wood Burner"
-    }
-  }
 ]

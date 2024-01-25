@@ -1,0 +1,31 @@
+[ 
+  {
+  "pk": 0,
+  "model": "products.windowfeature",
+    "fields": {
+      "name": "No window",
+      "window_type": "No window",
+      "price": 0
+    }
+  },
+
+  {
+  "pk": 1,
+  "model": "products.windowfeature",
+    "fields": {
+      "name": "Half Panoramic",
+      "window_type": "Half Panoramic",
+      "price": 320
+    }
+  },
+
+  {
+  "pk": 2,
+  "model": "products.windowfeature",
+    "fields": {
+      "name": "Panoramic",
+      "window_type": "Panoramic",
+      "price": 550
+    }
+  }
+]
