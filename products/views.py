@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product
+from .models import Product, StoveFeature, WindowFeature
 
 # Create your views here.
 
@@ -33,9 +33,13 @@ def product_detail(request, product_id):
     """ A view to return the the specific product to see description and a total price """ 
 
     product = get_object_or_404(Product, pk=product_id)
+    stove_feature = StoveFeature.objects.all()
+    window_feature = WindowFeature.objects.all()
 
     context = {
         'product': product,
+        'stove_feature': stove_feature,
+        'window_feature': window_feature,
     }
 
     return render(request, 'products/product_detail.html', context)

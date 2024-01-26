@@ -55,4 +55,5 @@ class Product(models.Model):
     
     @property
     def total_price(self):
-        return sum(self.price * self.stove_feature.price * self.window_feature.price)
+        total = self.price * self.stove_feature.price * self.window_feature.price
+        return total

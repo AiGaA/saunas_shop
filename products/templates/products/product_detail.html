@@ -21,16 +21,36 @@
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                     {% else %}
-                        <a href="">
+                        <a href="/media/placeholder_img.png" target="_blank">
                             <img class="card-img-top img-fluid" src="/media/placeholder_img.png" alt="{{ product.name }}">
                         </a>
                     {% endif %}
                     <div class="col-md-6">
                         <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
                         <div class="fs-5 mb-5">
-                            <span>{{ product.price }}</span>
+                            <span>€ {{ product.total_price }}</span>
                         </div>
                         <p class="lead">{{ product.description }}</p>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Stove type
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                {% for stove_type in stove_feature %}
+                                    <a class="dropdown-item" href="#">{{ stove_type }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Window type
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                {% for window_type in window_feature %}
+                                    <a class="dropdown-item" href="#">{{ window_type }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
                         <div class="d-flex">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                             <button class="btn btn-outline-dark flex-shrink-0" type="button">
