@@ -31,26 +31,27 @@
                             <span>€ {{ product.total_price }}</span>
                         </div>
                         <p class="lead">{{ product.description }}</p>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Stove type
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        
+                        <form class="form-inline">
+                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Stove type</label>
+                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                              <option selected>---</option>
                                 {% for stove_type in stove_feature %}
-                                    <a class="dropdown-item" href="#">{{ stove_type }}</a>
+                                    <option value="1">{{ stove_type }}</option>
                                 {% endfor %}
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Window type
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            </select>
+                          </form>
+
+                          <form class="form-inline">
+                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Window type</label>
+                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                              <option selected>---</option>
                                 {% for window_type in window_feature %}
-                                    <a class="dropdown-item" href="#">{{ window_type }}</a>
+                                    <option value="1">{{ window_type }}</option>
                                 {% endfor %}
-                            </div>
-                        </div>
+                            </select>
+                          </form>
+
                         <div class="d-flex">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                             <button class="btn btn-outline-dark flex-shrink-0" type="button">
