@@ -28,7 +28,13 @@
                     <div class="col-md-6">
                         <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
                         <div class="fs-5 mb-5">
-                            <span>€ {{ product.total_price }}</span>
+                            <span>
+                                {% if product.total_price %}
+                                    € {{ product.total_price|floatformat:2 }}
+                                {% else %}
+                                    € {{ product.price }}
+                                {% endif %}
+                            </span>
                         </div>
                         <p class="lead">{{ product.description }}</p>
                         
