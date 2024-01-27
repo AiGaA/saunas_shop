@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-wrgedqumuxw59bzu=9ukjyg$!zvwy@7xjl57)s88)s47t^rsd(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-aigaa-saunasshop-q1kkehc03g6.ws-eu107.gitpod.io', '8080-aigaa-saunasshop-q1kkehc03g6.ws-eu107.gitpod.io']
+ALLOWED_HOSTS = ['8000-aigaa-saunasshop-q1kkehc03g6.ws-eu107.gitpod.io']
 
+CSRF_TRUSTED_ORIGINS= ['https://8000-aigaa-saunasshop-q1kkehc03g6.ws-eu107.gitpod.io']
 
 # Application definition
 
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
+    'bootstrap4',
     'home',
     'products',
     'cart',
@@ -55,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'saunas_shop.urls'
@@ -98,6 +102,8 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 WSGI_APPLICATION = 'saunas_shop.wsgi.application'
 

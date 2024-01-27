@@ -38,24 +38,25 @@
                         </div>
                         <p class="lead">{{ product.description }}</p>
 
-                        <form class="form-inline" action="" method="POST">
+                        <form method="post">
                             {% csrf_token %}
-                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Stove type</label>
-                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                              <option selected>---</option>
-                                {% for stove_price in stove_feature %}
-                                    <option name="stove" data-item_id="{{ stove_feature.id }}" id="id_qty_{{ stove_feature.id }}">{{ stove_price }}</option>
-                                {% endfor %}
-                            </select>
-                            
-                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Window type</label>
+                            <h3>Additional Features</h3>
+                            {% for feature in features %}
+                              <input type="checkbox" name="features" value="{{ feature.id }}" autocomplete="off"> {{ feature.name }} (+€ {{ feature.price }})
+                              <br>
+                            {% endfor %}
+                          
+                            <p>Total Price: € {{ total_price }}</p>
+                            <button type="submit">Add feature</button>
+                        </form>
+                            <!-- <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Window type</label>
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                               <option selected>---</option>
                                 {% for window_type in window_feature %}
-                                    <option value="" name="window">{{ window_type }}</option>
+                                    <option value="" name="window">{{ form.as_p }}</option>
                                 {% endfor %}
-                            </select>
-                        </form>
+                                <button type="submit">Submit</button>
+                            </select> -->
 
                         <form class="form-inline" action="{% url 'add_to_cart' product.id %}" method="POST">
                             {% csrf_token %}
@@ -84,4 +85,17 @@
             </div>
         </section>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update option selected on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+</script>
 {% endblock %}

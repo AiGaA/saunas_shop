@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, StoveFeature, WindowFeature
+from .models import Product, Category, ProductFeature, ProductWithFeature
 
 # Register your models here.
 
@@ -21,21 +21,20 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
-class StoveFeatureAdmin(admin.ModelAdmin):
+class ProductFeatureAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'stove_type',
+        'product_type',
         'price',
     )
 
-class WindowFeatureAdmin(admin.ModelAdmin):
+class ProductWithFeatureAdmin(admin.ModelAdmin):
     list_display = (
-        'name',
-        'window_type',
-        'price',
+        'product',
+        'features',
     )
     
 admin.site.register(Product)
 admin.site.register(Category)
-admin.site.register(StoveFeature)
-admin.site.register(WindowFeature)
+admin.site.register(ProductFeature)
+admin.site.register(ProductWithFeature)

@@ -1,0 +1,61 @@
+[ 
+  {
+  "pk": 0,
+  "model": "products.productfeature",
+    "fields": {
+      "name": "Electric 7KW",
+      "product_type": "Electric",
+      "price": 0
+    }
+  },
+  
+  {
+  "pk": 1,
+  "model": "products.productfeature",
+    "fields": {
+      "name": "Electric 8KW",
+      "product_type": "Electric",
+      "price": 700
+    }
+  },
+  
+  {
+  "pk": 2,
+  "model": "products.productfeature",
+    "fields": {
+      "name": "Wood Burner",
+      "product_type": "Wood Burner",
+      "price": 1000
+    }
+  },
+
+  {
+  "pk": 3,
+  "model": "products.productfeature",
+    "fields": {
+      "name": "No window",
+        "product_type": "No window",
+        "price": 0
+    }
+  },
+    
+  {
+  "pk": 4,
+  "model": "products.productfeature",
+    "fields": {
+      "name": "Half Panoramic",
+      "product_type": "Half Panoramic",
+      "price": 320
+    }
+  },
+    
+  {
+  "pk": 5,
+  "model": "products.productfeature",
+    "fields": {
+      "name": "Panoramic",
+      "product_type": "Panoramic",
+      "price": 550
+    }
+  }
+]
