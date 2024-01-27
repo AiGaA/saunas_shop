@@ -6,6 +6,7 @@ def cart_contents(request):
     cart_items = []
     total = 0
     product_count = 0
+    item_total = 0
     cart = request.session.get('cart', {})
 
     for item_id, quantity in cart.items():

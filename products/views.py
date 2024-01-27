@@ -33,6 +33,7 @@ def product_detail(request, product_id):
     """ A view to return the the specific product to see description and a total price """ 
     
     product = get_object_or_404(Product, pk=product_id)
+    total_price = product.total_price
     features = ProductFeature.objects.all()
 
     if request.method == 'POST':

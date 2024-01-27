@@ -28,27 +28,22 @@
                     <div class="col-md-6">
                         <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
                         <div class="fs-5 mb-5">
-                            <span>
-                                {% if product.total_price %}
-                                    € {{ product.total_price|floatformat:2 }}
-                                {% else %}
-                                    € {{ product.price }}
-                                {% endif %}
+                            <span> Base price: 
+                                € {{ product.price }}
                             </span>
                         </div>
                         <p class="lead">{{ product.description }}</p>
 
-                        <form method="post">
+                        <!-- <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                             {% csrf_token %}
                             <h3>Additional Features</h3>
                             {% for feature in features %}
                               <input type="checkbox" name="features" value="{{ feature.id }}" autocomplete="off"> {{ feature.name }} (+€ {{ feature.price }})
                               <br>
                             {% endfor %}
-                          
-                            <p>Total Price: € {{ total_price }}</p>
-                            <button type="submit">Add feature</button>
-                        </form>
+                            <p type="number"><strong>Total Price: € {{ total_price }}</strong></p> 
+                            <input class="update-link btn btn-outline-black rounded-0 btn-lg" type="submit" value="Add feature">
+                        </form> -->
                             <!-- <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Window type</label>
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                               <option selected>---</option>
@@ -60,6 +55,24 @@
 
                         <form class="form-inline" action="{% url 'add_to_cart' product.id %}" method="POST">
                             {% csrf_token %}
+                            <!-- <h3>Additional Features</h3>
+                            {% for feature in features %}
+                              <input type="checkbox" name="features" value="{{ feature.id }}" autocomplete="off"> {{ feature.name }} (+€ {{ feature.price }})
+                              <br>
+                            {% endfor %}
+                            <p type="number"><strong>Total Price: € {{ total_price }}</strong></p> 
+                            <input class="update-link btn btn-outline-black rounded-0 btn-lg" type="submit" value="Add feature"> -->
+                            <!-- <div>
+                                <h3>Additional Features</h3>
+                                    {% for feature in features %}
+                                    <input type="checkbox" name="features" value="{{ feature.id }}" autocomplete="off"> {{ feature.name }} (+€ {{ feature.price }})
+                                        <br>
+                                    {% endfor %}
+                          
+                                    <p><strong>Total Price: € {{ total_price }}</strong></p>
+                                <button class="btn btn-outline-black rounded-0 btn-lg" type="submit">Add feature</button>
+                            </div> -->
+
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
