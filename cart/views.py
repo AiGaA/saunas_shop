@@ -42,17 +42,13 @@ def adjust_cart(request, item_id):
     return redirect(reverse('view_cart'))
 
 
-def remove_cart(request, item_id):
+def remove_from_cart(request, item_id):
     """ Remove a quantity of the specified product in the shopping cart """
 
     try:
         cart = request.session.get('cart', {})
 
-        del cart[item_id]
-        if not cart[item_id]:
-                cart.pop(item_id)
-        else:
-            cart.pop(item_id)
+        cart.pop(item_id)
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
