@@ -37,25 +37,22 @@
                             </span>
                         </div>
                         <p class="lead">{{ product.description }}</p>
-                        
+
                         <form class="form-inline" action="" method="POST">
                             {% csrf_token %}
                             <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Stove type</label>
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                               <option selected>---</option>
-                                {% for stove_type in stove_feature %}
-                                    <option value="">{{ stove_type }}</option>
+                                {% for stove_price in stove_feature %}
+                                    <option name="stove" data-item_id="{{ stove_feature.id }}" id="id_qty_{{ stove_feature.id }}">{{ stove_price }}</option>
                                 {% endfor %}
                             </select>
-                        </form>
-
-                        <form class="form-inline" action="" method="POST">
-                            {% csrf_token %}
+                            
                             <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Window type</label>
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                               <option selected>---</option>
                                 {% for window_type in window_feature %}
-                                    <option value="1">{{ window_type }}</option>
+                                    <option value="" name="window">{{ window_type }}</option>
                                 {% endfor %}
                             </select>
                         </form>
@@ -70,6 +67,7 @@
                                     </div>
                                 </div>
                             </div>
+                        
                             <div class="col-12">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">

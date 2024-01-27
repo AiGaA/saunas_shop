@@ -60,6 +60,11 @@ body {
     color: white !important;
 }
 
+.update-link, 
+.remove-item {
+    cursor: pointer;
+}
+
 .text-black {
     color: #000 !important;
 }
