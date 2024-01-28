@@ -43,12 +43,14 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'crispy_forms',
-    'bootstrap4',
     'home',
     'products',
     'cart',
     'checkout',
+
+        
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -63,6 +65,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'saunas_shop.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -80,6 +84,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'cart.context.cart_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
@@ -105,8 +113,6 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
-
-CRISPY_TEMPLATE_PACK = 'uni_form'
 
 WSGI_APPLICATION = 'saunas_shop.wsgi.application'
 
