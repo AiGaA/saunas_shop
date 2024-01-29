@@ -1,0 +1,1 @@
+web: gunicorn saunas_shop.wsgi.application
