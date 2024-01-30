@@ -21,8 +21,8 @@
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                     {% else %}
-                        <a href="/media/placeholder_img.png" target="_blank">
-                            <img class="card-img-top img-fluid" src="/media/placeholder_img.png" alt="{{ product.name }}">
+                        <a href="{% static 'placeholder_img.png' %}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{% static 'placeholder_img.png' %}" alt="{{ product.name }}">
                         </a>
                     {% endif %}
                     <div class="col-md-6">
