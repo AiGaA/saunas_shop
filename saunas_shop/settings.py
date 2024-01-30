@@ -9,9 +9,8 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os
-
 from pathlib import Path
+import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -31,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['saunas-shop-22fabe13bf89.herokuapp.com', '8000-aigaa-saunasshop-q1kkehc03g6.ws-eu107.gitpod.io', 'localhost']
 
-CSRF_TRUSTED_ORIGINS= ['https://8000-aigaa-saunasshop-q1kkehc03g6.ws-eu107.gitpod.io']
+# CSRF_TRUSTED_ORIGINS= ['saunas-shop-22fabe13bf89.herokuapp.com', 'https://8000-aigaa-saunasshop-q1kkehc03g6.ws-eu107.gitpod.io', 'localhost']
 
 # Application definition
 
@@ -132,7 +131,7 @@ WSGI_APPLICATION = 'saunas_shop.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse('postgres://vgdwmzor:yqaBcVZpas4BOpIDk7bq2Ws0ZF9qbbWa@kandula.db.elephantsql.com/vgdwmzor')
 }
 
 
