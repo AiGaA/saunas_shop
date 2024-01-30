@@ -131,7 +131,7 @@ WSGI_APPLICATION = 'saunas_shop.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://vgdwmzor:yqaBcVZpas4BOpIDk7bq2Ws0ZF9qbbWa@kandula.db.elephantsql.com/vgdwmzor')
+    'default': dj_database_url.parse('DATABASE_URL')
 }
 
 
