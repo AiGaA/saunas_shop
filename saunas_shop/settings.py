@@ -28,9 +28,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['saunas-shop-22fabe13bf89.herokuapp.com', '8000-aigaa-saunasshop-q1kkehc03g6.ws-eu107.gitpod.io', '8000-aigaa-saunasshop-4fkabhyzkw6.ws-eu108.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['saunas-shop-22fabe13bf89.herokuapp.com', '8000-aigaa-saunasshop-q1kkehc03g6.ws-eu107.gitpod.io', '8000-aigaa-saunasshop-4fkabhyzkw6.ws-eu108.gitpod.io', '8000-aigaa-saunasshop-4fkabhyzkw6.ws-eu110.gitpod.io', 'localhost']
 
-# CSRF_TRUSTED_ORIGINS= ['saunas-shop-22fabe13bf89.herokuapp.com', 'https://8000-aigaa-saunasshop-q1kkehc03g6.ws-eu107.gitpod.io', 'localhost']
+CSRF_TRUSTED_ORIGINS= ['https://8000-aigaa-saunasshop-4fkabhyzkw6.ws-eu110.gitpod.io']
 
 # Application definition
 
