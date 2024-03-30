@@ -39,6 +39,12 @@
                           <p class="card-text">€ {{ product.price }}</p>
                           <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-black rounded-0 btn-sm">More info</a>
                         </div>
+                        {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                        {% endif %}
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
