@@ -4,8 +4,7 @@
   "model": "products.productfeature",
     "fields": {
       "name": "Electric 7KW",
-      "product_type": "Electric",
-      "price": 0
+      "price_increment": 0
     }
   },
   
@@ -14,8 +13,7 @@
   "model": "products.productfeature",
     "fields": {
       "name": "Electric 8KW",
-      "product_type": "Electric",
-      "price": 700
+      "price_increment": 700
     }
   },
   
@@ -24,8 +22,7 @@
   "model": "products.productfeature",
     "fields": {
       "name": "Wood Burner",
-      "product_type": "Wood Burner",
-      "price": 1000
+      "price_increment": 1000
     }
   },
 
@@ -34,8 +31,7 @@
   "model": "products.productfeature",
     "fields": {
       "name": "No window",
-        "product_type": "No window",
-        "price": 0
+      "price_increment": 0
     }
   },
     
@@ -44,8 +40,7 @@
   "model": "products.productfeature",
     "fields": {
       "name": "Half Panoramic",
-      "product_type": "Half Panoramic",
-      "price": 320
+      "price_increment": 320
     }
   },
     
@@ -54,8 +49,7 @@
   "model": "products.productfeature",
     "fields": {
       "name": "Panoramic",
-      "product_type": "Panoramic",
-      "price": 550
+      "price_increment": 550
     }
   }
 ]

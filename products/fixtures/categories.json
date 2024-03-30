@@ -1,0 +1,18 @@
+[ 
+  {
+  "pk": 0,
+  "model": "products.category",
+    "fields": {
+      "name": "saunas",
+      "friendly_name": "Saunas"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "products.category",
+      "fields": {
+        "name": "hot-tubs",
+        "friendly_name": "Hot Tubs"
+      }
+    }
+]
