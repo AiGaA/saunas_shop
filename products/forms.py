@@ -1,24 +1,16 @@
-# from django import forms
-# from .models import Product, StoveFeature, WindowFeature
+from django import forms
+from .models import Product, Category
 
-# class ProductForm(forms.ModelForm):
-#     class Meta:
-#         model = Product
-#         fields = ['stove_feature', 'window_feature', 'sku', 'name', 'description', 'price', 'image_url', 'image']
+class ProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = '__all__'
 
-#     def __init__(self, *args, **kwargs):
-#         super(ProductForm, self).__init__(*args, **kwargs)
-#         self.fields['stove_feature'].queryset = StoveFeature.objects.all()
-#         self.fields['window_feature'].queryset = WindowFeature.objects.all()
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        categories = Category.objects.all()
+        friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
-#     stove_feature = forms.ModelChoiceField(
-#         queryset=StoveFeature.objects.all(),
-#         empty_label='Select a Stove Feature',
-#         required=False
-#     )
-
-#     window_feature = forms.ModelChoiceField(
-#         queryset=WindowFeature.objects.all(),
-#         empty_label='Select a Window Feature',
-#         required=False
-#     )
+        self.fields['category'].choices = friendly_names
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-black-rounded-0'
