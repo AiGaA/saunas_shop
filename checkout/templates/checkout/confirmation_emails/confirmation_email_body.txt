@@ -1,0 +1,23 @@
+Hi {{ order.full_name }}!
+
+Thank you for shopping at our shop. 
+
+This email is to confirm your purchase and below you will find your order information. 
+
+Your order number is: {{ order.order_number }}
+Order date: {{ order.date }}
+
+Order Total: {{ order.grand_total }}
+
+Shipping address: {{ order.street_address1 }}, {{ order.town_or_city }}, {{ order.country }}.
+
+Phone number: {{ order.phone_number }}
+
+If you have any questions about your order, please reach out to {{ contact_email }}.
+
+Thank you for your order! 
+
+
+Sincerely, 
+
+AMA Saunas Team
