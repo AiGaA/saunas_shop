@@ -24,49 +24,49 @@
   },
 
   {
-    "pk": 2,
-    "model": "products.product",
-      "fields": {
-        "sku": "AMA900001003",
-        "name": "2.5m barrel sauna",
-        "price": 2700,
-        "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches.",
-        "category": 0
-      }
+  "pk": 2,
+  "model": "products.product",
+    "fields": {
+      "sku": "AMA900001003",
+      "name": "2.5m barrel sauna",
+      "price": 2700,
+      "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches.",
+      "category": 0
+    }
   },
 
   {
-    "pk": 3,
-    "model": "products.product",
-      "fields": {
-        "sku": "AMA900001004",
-        "name": "3m barrel sauna",
-        "price": 3000,
-        "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches.",
-        "category": 0
-      }
+  "pk": 3,
+  "model": "products.product",
+    "fields": {
+      "sku": "AMA900001004",
+      "name": "3m barrel sauna",
+      "price": 3000,
+      "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches.",
+      "category": 0
+    }
   },
 
   {
-    "pk": 4,
-    "model": "products.product",
-      "fields": {
-        "sku": "AMA900001005",
-        "name": "3.5m barrel sauna",
-        "price": 3500,
-        "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches.",
-        "category": 0
-      }
+  "pk": 4,
+  "model": "products.product",
+    "fields": {
+      "sku": "AMA900001005",
+      "name": "3.5m barrel sauna",
+      "price": 3500,
+      "description": "Barrel sauna, fully assembled. This sauna is equipped with wooden door with a glass, seats (2), stove, LED lights, floor, light switches.",
+      "category": 0
+    }
   },  
   {
-    "pk": 5,
-    "model": "products.product",
-      "fields": {
-        "sku": "AMA900001006",
-        "name": "Hot Tub",
-        "price": 3500,
-        "description": "Hot tub, comes with har and soft cover.",
-        "category": 1
-      }
+  "pk": 5,
+  "model": "products.product",
+    "fields": {
+      "sku": "AMA900001006",
+      "name": "Hot Tub",
+      "price": 3500,
+      "description": "Hot tub, comes with har and soft cover.",
+      "category": 1
+    }
   }  
 ]
