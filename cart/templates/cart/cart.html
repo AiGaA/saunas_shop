@@ -40,10 +40,10 @@
                             {% for item in cart_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        {% if product.image %}
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                        {% if item.product.image %}
+                                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                         {% else %}
-                                        <img class="card-img-top img-fluid" src="/media/placeholder_img.png" alt="{{ product.name }}">
+                                            <img class="w-100" src="/media/placeholder_img.png" alt="{{ product.name }}">
                                         {% endif %}
                                     </td>
                                     <td class="py-3">
