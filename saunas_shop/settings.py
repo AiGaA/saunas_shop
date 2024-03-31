@@ -224,18 +224,18 @@ STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 DEFAULT_FROM_EMAIL = 'info@amasaunas.com'
 
 
-if 'DEVELOPMENT' in os.environ:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'info@amasaunas.com'
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
-    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-    # OAuth settings for Gmail
-    GOOGLE_OAUTH2_CLIENT_ID = os.environ.get('GOOGLE_OAUTH2_CLIENT_ID')
-    GOOGLE_OAUTH2_CLIENT_SECRET = os.environ.get('GOOGLE_OAUTH2_CLIENT_SECRET')
-    GOOGLE_OAUTH2_REDIRECT_URI = 'http://localhost:8000/oauth2callback'
+# if 'DEVELOPMENT' in os.environ:
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'info@amasaunas.com'
+# else:
+#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#     EMAIL_USE_TLS = True
+#     EMAIL_PORT = 587
+#     EMAIL_HOST = 'smtp.gmail.com'
+#     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+#     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+#     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+#     # OAuth settings for Gmail
+#     GOOGLE_OAUTH2_CLIENT_ID = os.environ.get('GOOGLE_OAUTH2_CLIENT_ID')
+#     GOOGLE_OAUTH2_CLIENT_SECRET = os.environ.get('GOOGLE_OAUTH2_CLIENT_SECRET')
+#     GOOGLE_OAUTH2_REDIRECT_URI = 'http://localhost:8000/oauth2callback'
