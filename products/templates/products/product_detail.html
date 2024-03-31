@@ -15,16 +15,18 @@
         <!-- Product section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    {% if product.image %}
-                        <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                    {% else %}
-                        <a href="/media/placeholder_img.png" target="_blank">
-                            <img class="card-img-top img-fluid" src="/media/placeholder_img.png" alt="{{ product.name }}">
-                        </a>
-                    {% endif %}
+                <div class="row px-4 px-lg-5 align-items-center">
+                    <div class="image-container my-5">
+                        {% if product.image %}
+                            <a href="{{ product.image.url }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                        {% else %}
+                            <a href="/media/placeholder_img.png" target="_blank">
+                                <img class="card-img-top img-fluid" src="/media/placeholder_img.png" alt="{{ product.name }}">
+                            </a>
+                        {% endif %}
+                    </div>
                     <div class="col-md-6">
                         {% if request.user.is_superuser %}
                         <small class="ml-3">
