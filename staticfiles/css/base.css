@@ -89,6 +89,13 @@ body {
     object-fit: cover;
 }
 
+/* Mailchimp */
+#mc_embed_signup {
+    background:#fff; 
+    clear:left; 
+    width: 600px;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -197,7 +204,7 @@ div.content {
 
 /* fixed top navbar only on medium and up */
 @media (max-width: 992px) {
-    
+
     .image-container {
         height:auto;
         width: auto;
