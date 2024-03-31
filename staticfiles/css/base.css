@@ -83,13 +83,19 @@ body {
     z-index: -1;
 }
 
+.image-container{
+    width: 650px;
+    height: 460px;
+    object-fit: cover;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
     position: fixed;
     top: 72px;
     right: 15px;
-    z-index: 99999;
+    z-index: 99999999999;
 }
 
 .custom-toast {
@@ -101,6 +107,40 @@ body {
 }
 
 
+/* Login / Logout form page */
+
+.account-form-back {
+    background: #e2e2e2;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  
+.account-form-center {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 1em 2em;
+    border-bottom: 2px solid #ccc;
+    display: table;
+}
+  
+div.content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -109,6 +149,35 @@ body {
     max-width: 80%;
   }
 }
+
+
+/* Product Form */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -123,4 +192,15 @@ body {
     .header-container {
         padding-top: 164px;
     }
+
+}
+
+/* fixed top navbar only on medium and up */
+@media (max-width: 992px) {
+    
+    .image-container {
+        height:auto;
+        width: auto;
+    }
+
 }
