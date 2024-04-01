@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="overlay"></div>
-    <div class="account-form-back">
-        <div class="account-form-center">
-            <div class="content">
+<div class="container header-container">
+    <div class="overlay"></div>
+    <div class="row w-100">
+        <div class="col-8 mx-auto mb-2">
+            <div class="allauth-form-inner-content">
                 {% block inner_content %}
                 {% endblock %}
             </div>
         </div>
     </div>
+</div>
+
 
 {% endblock %}

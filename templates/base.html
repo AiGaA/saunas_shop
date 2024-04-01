@@ -4,8 +4,9 @@
     <head>
     <!-- Required meta tags -->
     {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Custom made barrel saunas and hut tubs delivered to your door. Built
         in the back of your garden and can be used within hours. Choose the wood burner or electric heater. All materials used are eco friendly.
@@ -32,7 +33,7 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>        
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
 
         <!--Stripe-->
         <script src="https://js.stripe.com/v3/"></script>
@@ -113,7 +114,6 @@
                     {% include 'includes/main-nav.html' %}
                 </nav>
             </div>
-            
         </header>
 
         {% if messages %}
@@ -168,8 +168,9 @@
                 var $mcj = jQuery.noConflict(true);
         </script>
         {% endblock %}
+        
+        <div class="row bg-white">
+            {% include 'includes/footer.html' %}
+        </div>
     </body>
-    <div class="row bg-white mx-4">
-        {% include 'includes/footer.html' %}
-    </div>
 </html>
