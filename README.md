@@ -94,9 +94,9 @@ You will keys provided by these two application to connect to the project and in
 You can clone this repository and run it locally with the following steps:
 
 - Login to GitHub (https://wwww.github.com)
-- Select the repository [Passport Pages](https://github.com/AiGaA/passport-pages)
-- Click the Code button and copy the HTTPS url, for example: https://github.com/AiGaA/passport-pages.git
-- In your IDE, open a terminal and run the git clone command, for example: git clone https://github.com/AiGaA/passport-pages.git
+- Select the repository [Passport Pages](https://github.com/AiGaA/saunas_shop)
+- Click the Code button and copy the HTTPS url, for example: https://github.com/AiGaA/saunas_shop
+- In your IDE, open a terminal and run the git clone command, for example: git clone https://github.com/AiGaA/saunas_shop
 - The repository will now be cloned in your workspace
 - You will need to create your own env.py file and this should be added to .gitignore file too (so this is not commited and exposed to public) 
 - In env.py add the following code with the relevant key, value pairs, and ensure you enter the correct key values
@@ -105,7 +105,12 @@ You can clone this repository and run it locally with the following steps:
 import os
 os.environ['SECRET_KEY'] = 'ADDED_BY_YOU'
 os.environ['DATABASE_URL'] = 'ADDED_BY_YOU'
-os.environ['CLOUDINARY_URL'] = 'ADDED_BY_YOU'
+os.environ["STRIPE_PUBLIC_KEY"] = 'ADDED_BY_YOU'
+os.environ["STRIPE_SECRET_KEY"] = 'ADDED_BY_YOU'
+os.environ["STRIPE_WH_SECRET"] = 'ADDED_BY_YOU'
+os.environ["AWS_ACCESS_KEY_ID"] = 'ADDED_BY_YOU'
+os.environ["AWS_SECRET_ACCESS_KEY"] = 'ADDED_BY_YOU'
+os.environ["USE_AWS"] = 'ADDED_BY_YOU'
 ```
 
 - Install the relevant packages as per the requirements.txt file
