@@ -94,7 +94,7 @@ You will keys provided by these two application to connect to the project and in
 You can clone this repository and run it locally with the following steps:
 
 - Login to GitHub (https://wwww.github.com)
-- Select the repository [Passport Pages](https://github.com/AiGaA/saunas_shop)
+- Select the repository [Saunas shop](https://github.com/AiGaA/saunas_shop)
 - Click the Code button and copy the HTTPS url, for example: https://github.com/AiGaA/saunas_shop
 - In your IDE, open a terminal and run the git clone command, for example: git clone https://github.com/AiGaA/saunas_shop
 - The repository will now be cloned in your workspace
