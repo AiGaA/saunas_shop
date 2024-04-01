@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Sitemap: https://saunas-shop-22fabe13bf89.herokuapp.com/sitemap.xml
